@@ -63,3 +63,53 @@
 .c-skills-list__name {
     color: var(--color-paragraph);
 }
+
+/* =================================================== */
+/* c-skills-list.css (Añadiendo estilo de Panel)       */
+/* =================================================== */
+
+/* Estilo base de la tarjeta (ya lo tienes, pero optimizamos el border) */
+.c-skills-list__item {
+    background-color: var(--color-card-background);
+    /* Borde ahora usa el color secundario (Lima Shock) */
+    border: 1px solid var(--color-brand-secondary); 
+    border-radius: 2px; /* Más cuadrado para el look técnico */
+    padding: 1.5rem 1rem 0.5rem 1rem;
+    /* ... otros estilos ... */
+    position: relative; /* Necesario para el indicador */
+    overflow: hidden; /* Limpia el borde de la barra de datos */
+}
+
+/* Indicador de "Online" o "Status" */
+.c-skills-list__item::before {
+    content: "RIP: ONLINE";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-brand-primary); /* Púrpura */
+    color: var(--color-text-light);
+    font-size: 0.7rem;
+    padding: 0.2rem 0;
+    font-family: monospace;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+/* Efecto de 'Barra de Progreso' o 'Línea de Conexión' */
+.c-skills-list__item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 90%; /* Simula una barra de progreso al 90% */
+    background: var(--color-success); /* Verde Neón */
+    
+    /* Pequeño brillo a la barra */
+    box-shadow: 0 0 5px var(--color-success);
+}
+
+.c-skills-list__item:hover {
+    box-shadow: 0 0 20px var(--color-brand-primary), 0 0 5px var(--color-brand-secondary);
+}
