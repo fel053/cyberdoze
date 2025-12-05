@@ -11,7 +11,7 @@
     background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
     background-position: center center; /* Centra la imagen */
     background-repeat: no-repeat;
-    transform: rotateY(180deg);
+    transform: rotateYgit(180deg);
     
     
     /* 2. COLOR DE RESPALDO (usando la variable de fondo oscuro) */

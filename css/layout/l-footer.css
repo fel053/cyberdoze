@@ -38,3 +38,30 @@
 .l-footer p {
     margin-bottom: 0.5rem;
 }
+
+/* =================================================== */
+/* l-footer.css (Añadiendo Cursor Parpadeante)         */
+/* =================================================== */
+
+/* Estilo base para el cursor */
+.c-terminal-cursor {
+    color: var(--color-brand-secondary); /* Lima Shock */
+    margin-left: 5px;
+    /* Activa la animación de parpadeo */
+    animation: blink-cursor 1s infinite step-end;
+}
+
+/* ---------------------------------- */
+/* DEFINICIÓN DE LA ANIMACIÓN BLINK   */
+/* ---------------------------------- */
+
+@keyframes blink-cursor {
+    0%, 100% { 
+        /* Opacidad total (cursor visible) */
+        opacity: 1; 
+    }
+    50% { 
+        /* Opacidad cero (cursor invisible) */
+        opacity: 0; 
+    }
+}

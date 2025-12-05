@@ -1,0 +1,8 @@
+/* =================================================== */
+/* style.css (O un archivo CSS Global)                 */
+/* =================================================== */
+
+html {
+    /* Esta propiedad CSS es la clave para el desplazamiento suave */
+    scroll-behavior: smooth;
+}
