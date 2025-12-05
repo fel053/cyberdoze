@@ -1,0 +1,17 @@
+.l-container {
+    /* Define el ancho máximo que tendrá el contenido */
+    max-width: 1200px; 
+    
+    /* Centra el contenedor horizontalmente dentro de su padre */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Añade padding interno para evitar que el contenido toque los bordes del viewport */
+    /* Esto es crucial en pantallas móviles */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+    /* Opcional: añade un poco de espacio vertical si es necesario */
+    /* margin-top: 2rem; */
+    /* margin-bottom: 2rem; */
+}

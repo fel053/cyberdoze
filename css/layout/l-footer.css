@@ -1,0 +1,40 @@
+/* =================================================== */
+/* ./css/layout/l-footer.css                           */
+/* Estilos para el Pie de Página (Footer) - Ciberpunk  */
+/* =================================================== */
+
+.l-footer {
+    /* Fondo oscuro, similar al header y tarjetas */
+    background-color: var(--color-surface-dark); /* #1f1f2e */
+    /* Color de texto base */
+    color: var(--color-text-base); /* #c0c0c0 */
+    
+    padding: 2rem 1rem;
+    text-align: center;
+    
+    /* Asegura que ocupe todo el ancho */
+    width: 100%;
+    
+    /* Separación superior para evitar que se pegue al contenido */
+    margin-top: 3rem; 
+    
+    /* Efecto Neón de Separación */
+    border-top: 2px solid var(--color-brand-secondary); /* #CCFF00 (Lima Shock) */
+    /* Sombra sutil para el brillo */
+    box-shadow: 0 -5px 15px -5px var(--color-brand-secondary); 
+}
+
+/* Estilos para enlaces o elementos específicos dentro del footer */
+.l-footer a {
+    color: var(--color-brand-primary); /* #A621FF */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.l-footer a:hover {
+    color: var(--color-brand-secondary); /* #CCFF00 */
+}
+
+.l-footer p {
+    margin-bottom: 0.5rem;
+}

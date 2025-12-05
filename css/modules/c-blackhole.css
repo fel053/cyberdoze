@@ -1,0 +1,72 @@
+.c-blackhole {
+    width: 100%;
+    text-align: center;
+    margin: 60px 0;
+    position: relative;
+    z-index: 9999;
+}
+
+.c-blackhole__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-blackhole__core {
+    width: var(--bh-size-start);
+    height: var(--bh-size-start);
+    border-radius: 50%;
+    background: radial-gradient(circle,
+        var(--bh-inner) 0%,
+        var(--bh-outer) 70%,
+        transparent 100%
+    );
+    animation: bh-spin 4s linear infinite;
+    transition: transform var(--bh-collapse-duration) ease-in;
+    cursor: pointer;
+}
+
+/* Crecimiento masivo del agujero negro */
+.c-blackhole:hover .c-blackhole__core {
+    transform: scale(30);
+}
+
+/* Captions afectados por la gravedad */
+.c-blackhole:hover .c-blackhole__caption {
+    animation: bh-fall-in var(--bh-collapse-duration) forwards ease-in;
+}
+
+/* Absorbe todo el DOM excepto el propio agujero */
+.c-blackhole:hover ~ * ,
+.c-blackhole:hover ~ * * {
+    animation: bh-fall-in var(--bh-collapse-duration) forwards ease-in;
+}
+
+/* Giro del core */
+@keyframes bh-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* La animación de caer dentro del agujero */
+@keyframes bh-fall-in {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    70% {
+        transform: translate(0, -150px) scale(0.5);
+        opacity: 0.4;
+    }
+    99% {
+        transform: translate(0, -200px) scale(0.02);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+

@@ -1,0 +1,135 @@
+:root {
+  /* ------------------------------------------------- */
+  /* 1. CONFIGURACIÓN BASE (Común para todas las paletas)*/
+  /* ------------------------------------------------- */
+
+  --color-background-page: #10101a;
+  --color-surface-dark: #1f1f2e;
+  --color-text-base: #c0c0c0;
+  --color-text-light: #ffffff;
+
+  /* COLORES FUNCIONALES */
+  --color-success: #39ff14;
+  --color-warning: #ffd700;
+  --color-error: #ff3333;
+
+  /* ------------------------------------------------- */
+  /* 2. PALETA B: 💜 CYBER PÚRPURA & LIMA SHOCK (Synthwave) */
+  /* ------------------------------------------------- */
+
+  --color-brand-primary: #a621ff; /* Púrpura Vibrante para CTA */
+  --color-brand-secondary: #ccff00; /* Verde Lima/Amarillo para Header y Subtítulos */
+  --color-button-glow: #a621ff55; /* Sombra suave de botón (RGBA) */
+
+  /* ------------------------------------------------- */
+  /* 3. ASIGNACIONES DE DISEÑO (Para usar en los componentes) */
+  /* ------------------------------------------------- */
+
+  /* TIPOGRAFÍA */
+  --color-heading: var(--color-brand-secondary);
+  --color-paragraph: var(--color-text-base);
+
+  /* COMPONENTES */
+  --color-nav-background: var(--color-surface-dark);
+  --color-nav-text: var(--color-text-base);
+  --color-nav-link-hover: var(--color-brand-primary);
+
+  --color-card-background: var(--color-surface-dark);
+  --color-card-border: var(--color-brand-primary);
+
+  /*blackhole*/
+ --bh-size-start: 60px;
+    --bh-size-end: 2000px;
+
+    --bh-inner: #000;
+    --bh-outer: #111;
+
+    --bh-collapse-duration: 10s;
+}
+
+.l-header {
+  /* Usamos el color de superficie oscura para la barra superior */
+  background-color: var(--color-nav-background); /* #1f1f2e */
+  /* El texto de la cabecera debe ser claro */
+  color: var(--color-nav-text); /* #c0c0c0 */
+
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between; /* Para separar el logo y la navegación */
+  align-items: center;
+
+  /* Pequeño brillo en el borde inferior para el efecto neón */
+  border-bottom: 2px solid var(--color-brand-secondary); /* #CCFF00 */
+  box-shadow: 0 0 10px var(--color-brand-secondary);
+}
+
+.l-header h2 {
+  color: var(--color-heading); /* #CCFF00 */
+  font-size: 1.2rem;
+}
+
+.l-header b {
+  color: var(--color-brand-primary); /* #A621FF */
+}
+
+.l-footer {
+  /* Color de superficie oscura similar al header */
+  background-color: var(--color-surface-dark); /* #1f1f2e */
+  color: var(--color-text-base); /* #c0c0c0 */
+
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 3rem; /* Separación del contenido principal */
+
+  /* El mismo brillo sutil que el header */
+  border-top: 2px solid var(--color-brand-secondary);
+  box-shadow: 0 0 10px var(--color-brand-secondary);
+}
+
+/* NOTA: Asumiendo que el body usa este fondo global */
+body {
+  background-color: var(--color-background-page); /* #10101a (El más oscuro) */
+  color: var(--color-text-base); /* #c0c0c0 */
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura */
+}
+
+.l-container {
+  /* Este es el contenedor centrado */
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  /* No necesita background-color si el body ya lo tiene */
+}
+
+/* =================================================== */
+/* ./css/layout/l-grid.css                             */
+/* Estilos para la Rejilla Global (Si existe)          */
+/* =================================================== */
+
+/* Puedes definir variables de espaciado aquí si es necesario
+:root {
+    --spacing-lg: 3rem;
+}
+*/
+
+/* No suele llevar colores, solo layout */
+.l-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Indica que toda la web tiene transform-origin estable */
+body, .site-content {
+    transform-origin: center;
+    transition:
+        transform var(--bh-collapse-duration) ease-in,
+        opacity var(--bh-collapse-duration) ease-in;
+}
+
+/* Cuando se activa el agujero, todo colapsa hacia él */
+.c-blackhole:hover ~ .site-content {
+    transform: translateY(-200px) scale(0.01);
+    opacity: 0;
+}

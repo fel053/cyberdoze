@@ -1,0 +1,41 @@
+/* =================================================== */
+/* c-nav-bar.css - DISPOSICIÓN HORIZONTAL (FLEXBOX)    */
+/* =================================================== */
+
+.c-nav-bar {
+    /* 1. Limpieza de lista (si usas <ul>) */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    /* 2. DISPOSICIÓN HORIZONTAL */
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    gap: 1rem; 
+    
+    /* COLORES NEÓN */
+    background-color: var(--color-nav-background); /* #1f1f2e */
+    padding: 1rem;
+    box-shadow: 0 0 15px var(--color-button-glow); /* Efecto de brillo sutil */
+}
+
+
+/* Opcional: Estilo específico para los botones en la barra de navegación */
+/* Aquí puedes anular cualquier estilo de la lista de skills que no quieras, 
+   como eliminar el ícono, si aplica. */
+.c-nav-bar .c-skills-list__item {
+    /* Si el icono ya no está, podemos reajustar el padding o ancho */
+    flex-grow: 1; /* Hace que los botones llenen el espacio disponible */
+    max-width: 200px; /* Limita el tamaño para que no sean demasiado anchos */
+    padding: 0.75rem 1rem; /* Padding ajustado */
+   color: var(--color-nav-text); /* #c0c0c0 */
+    border: 1px solid var(--color-nav-text); /* Un color de fondo para distinguirlo de la barra */
+}
+
+.c-nav-bar .c-skills-list__item:hover {
+    color: var(--color-nav-link-hover); /* #A621FF */
+    border-color: var(--color-nav-link-hover);
+    transform: translateY(-5px); 
+    box-shadow: 0 0 10px var(--color-brand-primary)
+}

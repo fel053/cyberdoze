@@ -1,0 +1,76 @@
+.l-header {
+
+    /* Usa flexbox para alinear el contenido interno (logo y nav) */
+
+.l-header {
+    width: 100%; /* Asegura que ocupa todo el ancho de la ventana */
+    background-color: var(--color-nav-background); 
+    padding: 1rem;
+    display: flex; /* Para manejar los hijos: logo, nav, advertencia */
+    justify-content: space-between;
+    align-items: center;
+    /* ... otros estilos ... */
+}
+    /* Opcional: si quieres que el header se quede fijo arriba */
+  /*     position: sticky; 
+       top: 0; 
+       z-index: 100; 
+       */
+}
+
+/* =================================================== */
+/* c-glitch.css o l-header.css (Nuevo)                 */
+/* =================================================== */
+
+.c-glitch-warning {
+    color: var(--color-brand-secondary); /* Lima Shock para el texto principal */
+    font-size: 1.5rem;
+    font-family: monospace;
+    position: relative;
+    
+    /* Activa la animación */
+    animation: glitch-anim 2.5s infinite linear alternate;
+}
+
+.c-glitch-warning i {
+    color: var(--color-brand-primary); /* Púrpura */
+    font-style: normal;
+}
+
+/* ---------------------------------- */
+/* DEFINICIÓN DE LA ANIMACIÓN GLITCH  */
+/* ---------------------------------- */
+
+@keyframes glitch-anim {
+    0% {
+        /* Estado base (casi normal) */
+        transform: translate(0);
+        text-shadow: 0 0 1px var(--color-brand-secondary);
+    }
+    
+    5%, 15%, 25%, 35%, 65%, 75% {
+        /* Desplazamiento y brillo en ciertos momentos */
+        transform: translate(1px, -1px);
+        text-shadow: 0 0 10px var(--color-brand-primary); /* Brillo Púrpura */
+    }
+    
+    10%, 20%, 30%, 40%, 70%, 80% {
+        /* Desplazamiento y brillo opuesto */
+        transform: translate(-1px, 1px);
+        text-shadow: 0 0 10px var(--color-brand-secondary); /* Brillo Lima */
+        opacity: 0.95;
+    }
+    
+    50% {
+        /* Breve interrupción: se mueve más y se pone más borroso */
+        transform: translate(3px, -3px);
+        text-shadow: 2px 2px 0 var(--color-error);
+        opacity: 0.8;
+    }
+    
+    100% {
+        /* Vuelve al estado base */
+        transform: translate(0);
+        text-shadow: 0 0 1px var(--color-brand-secondary);
+    }
+}

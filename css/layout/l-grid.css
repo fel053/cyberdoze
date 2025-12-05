@@ -1,0 +1,21 @@
+.l-grid {
+    display: grid;
+    /* Define columnas flexibles que se adaptan automáticamente */
+    /* minmax(250px, 1fr) significa: mínimo 250px, pero usa todo el espacio disponible (1fr) */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+    /* Espacio entre las celdas (filas y columnas) */
+    gap: 1.5rem; 
+    
+    /* Alineación de los elementos en el centro de la celda verticalmente */
+    align-items: center;
+}
+
+/* Opcional: Modificador para un grid que requiere solo 2 columnas */
+.l-grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+    /* En pantallas muy pequeñas, vuelve a ser flexible */
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}

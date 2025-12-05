@@ -1,0 +1,26 @@
+.c-logo-animado {
+    /* Dimensiones del contenedor: deben coincidir con UN solo fotograma */
+    width: 254px; 
+    height: 238px;
+    
+    /* Carga la imagen completa del sprite sheet (asegura la ruta correcta) */
+    background-image: url('./pardo4frames.png');
+    background-repeat: no-repeat;
+    background-position-x: 0; 
+    
+    /* Aplica la animación */
+    animation-name: animacion-pardo;
+    animation-duration: 0.8s; /* Ajustamos la duración (0.2s por frame * 4 frames) */
+    animation-timing-function: steps(4); 
+    animation-iteration-count: infinite; 
+}
+
+/* Definimos los keyframes */
+@keyframes animacion-pardo {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        background-position-x: -1016px; 
+    }
+}

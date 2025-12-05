@@ -1,0 +1,51 @@
+body {
+    /* Define la fuente principal y el tamaño base */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px; 
+    /* Define el interlineado base para mejorar la legibilidad */
+    line-height: 1.6; 
+    color: #333; /* Color de texto principal */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif; /* A menudo se usa una fuente diferente para títulos */
+    line-height: 1.2; /* Interlineado más ajustado para títulos */
+    margin-bottom: 0.5em; /* Espacio después de cada título */
+    color: #000;
+}
+
+h1 {
+    font-size: 3rem; /* Tamaños relativos para escalabilidad */
+    font-weight: 700;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1em; /* Espacio estándar entre párrafos */
+    text-align: justify; /* Opcional: justificar texto */
+}
+
+ul, ol {
+    margin-bottom: 1em;
+    margin-left: 2em; /* Añade la sangría para las listas */
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: #007bff; /* Color azul estándar */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    transition: color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+a:hover, a:focus {
+    color: #0056b3; /* Color al pasar el ratón por encima */
+    text-decoration: underline; /* Añade el subrayado al interactuar */
+}

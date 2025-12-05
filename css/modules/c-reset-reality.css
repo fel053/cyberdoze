@@ -1,0 +1,68 @@
+/* ============================================= */
+/* COMPONENTE: Recargar la Realidad              */
+/* Archivo: c-reset-reality.css                  */
+/* ============================================= */
+
+.c-reset-reality {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.c-reset-reality__title {
+    font-size: 2rem;
+    color: var(--color-brand-secondary);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px var(--color-brand-secondary);
+}
+
+.c-reset-reality__box {
+    display: flex;
+    justify-content: center;
+}
+
+.c-reset-reality__select {
+    padding: 1rem 1.5rem;
+    background: var(--color-surface-dark);
+    color: var(--color-text-light);
+    border: 2px solid var(--color-brand-primary);
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 12px var(--color-brand-primary);
+    transition: 
+        filter 0.5s ease,
+        background 0.5s ease,
+        transform 0.4s ease;
+}
+
+.c-reset-reality__select:hover {
+    filter: brightness(1.3);
+}
+
+/* Animaciones sutiles según opción elegida */
+.c-reset-reality__select option[value="claridad"] {
+    background: var(--color-brand-secondary);
+    color: black;
+}
+
+.c-reset-reality__select option[value="vacío"] {
+    background: #000;
+    color: var(--color-brand-secondary);
+}
+
+.c-reset-reality__select option[value="eco"] {
+    background: var(--color-brand-primary);
+    color: white;
+}
+
+.c-reset-reality__select option[value="inocencia"] {
+    background: var(--color-warning);
+    color: black;
+}
+
+.c-reset-reality__note {
+    margin-top: 1rem;
+    color: var(--color-text-base);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}

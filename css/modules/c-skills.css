@@ -1,0 +1,65 @@
+.c-skills-list {
+    /* Elimina los estilos de lista predeterminados (viene del reset/normalize) */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    /* Usa CSS Grid para la disposición */
+    display: grid;
+    
+    /* Crea columnas flexibles que se autoajustan (la mejor práctica actual) */
+    /* Mínimo 100px por ítem, máximo todo el espacio disponible */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    
+    /* Espacio (gap) entre las tarjetas de habilidad/íconos */
+    gap: 1.5rem; 
+}
+
+.c-skills-list__item {
+    text-align: center; /* Centra el icono y el texto */
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.c-skills-list__item:hover {
+    transform: translateY(-5px); /* Efecto hover sutil */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.c-skills-list__icon {
+    /* Asegura que los íconos o imágenes tengan un tamaño consistente */
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.c-skills-list__name {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.c-skills-list {
+    /* El fondo del área de skills será el fondo de la página */
+    background-color: var(--color-background-page); 
+}
+
+.c-skills-list__item {
+    /* Fondo de tarjeta oscuro */
+    background-color: var(--color-card-background); 
+    /* Borde con el color primario */
+    border: 1px solid var(--color-card-border); 
+    color: var(--color-text-base);
+    /* ... otros estilos ... */
+}
+
+.c-skills-list__item:hover {
+    transform: translateY(-5px); 
+    /* Efecto de sombra neón más fuerte */
+    box-shadow: 0 0 20px var(--color-brand-primary), 0 0 5px var(--color-brand-secondary);
+}
+
+.c-skills-list__name {
+    color: var(--color-paragraph);
+}
