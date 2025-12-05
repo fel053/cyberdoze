@@ -8,40 +8,6 @@ Es un experimento visual y verbal que intenta —con humor y sin soluciones mág
 
 Si Nicanor Parra hubiera diseñado frontends y Krishnamurti dejara notas en los comentarios, quizá saldría algo parecido a esto.
 
----
-
-## Qué hay aquí (estructura)
-
-**`// ...`**
-/
-├─ /css
-│  ├─ /base
-│  │  ├─ _variables.css
-│  │  ├─ reset.css
-│  │  └─ t-typography.css
-│  ├─ /layout
-│  │  ├─ l-container.css
-│  │  ├─ l-header.css
-│  │  ├─ l-footer.css
-│  │  └─ l-grid.css
-│  └─ /modules
-│     ├─ c-hero.css
-│     ├─ c-poema.css
-│     ├─ c-questions.css
-│     ├─ c-reset-reality.css
-│     └─ c-blackhole.css
-├─ /js
-│  └─ blackhole.js
-├─ index.html
-└─ README.md
-'''txt
-**`// ...`**
-
-yaml
-Copiar código
-
----
-
 ## Descripción corta (para el curioso y el apurado)
 
 Un sitio que te recibe con una advertencia, te hace sentir incómodo con preguntas íntimas y, si insistes demasiado, te devora estéticamente con un agujero negro que actúa como metáfora y como demo técnica.  
