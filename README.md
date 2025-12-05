@@ -12,25 +12,30 @@ Si Nicanor Parra hubiera diseñado frontends y Krishnamurti dejara notas en los 
 
 ## Qué hay aquí (estructura)
 
-/ (raíz)
+**`// ...`**
+/
 ├─ /css
-│ ├─ /base/_variables.css # paleta cyber-púrpura + variables globales
-│ ├─ /base/reset.css
-│ ├─ /base/t-typography.css
-│ ├─ /layout/l-container.css
-│ ├─ /layout/l-header.css
-│ ├─ /layout/l-footer.css
-│ ├─ /layout/l-grid.css
-│ └─ /modules
-│ ├─ c-hero.css
-│ ├─ c-poema.css
-│ ├─ c-questions.css
-│ ├─ c-reset-reality.css
-│ └─ c-blackhole.css
+│  ├─ /base
+│  │  ├─ _variables.css
+│  │  ├─ reset.css
+│  │  └─ t-typography.css
+│  ├─ /layout
+│  │  ├─ l-container.css
+│  │  ├─ l-header.css
+│  │  ├─ l-footer.css
+│  │  └─ l-grid.css
+│  └─ /modules
+│     ├─ c-hero.css
+│     ├─ c-poema.css
+│     ├─ c-questions.css
+│     ├─ c-reset-reality.css
+│     └─ c-blackhole.css
 ├─ /js
-│ └─ blackhole.js # script mínimo que dispara la "absorción" y hace scroll
-├─ index.html # markup principal (BEM, listo para desplegar)
-└─ README.md # este archivo
+│  └─ blackhole.js
+├─ index.html
+└─ README.md
+'''txt
+**`// ...`**
 
 yaml
 Copiar código
